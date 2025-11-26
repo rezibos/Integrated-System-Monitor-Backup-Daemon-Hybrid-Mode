@@ -1,0 +1,26 @@
+{
+    "log_files": [
+        "/var/log/syslog",
+        "/var/log/auth.log",
+        "/var/log/kern.log",
+        "/var/log/dpkg.log",
+        "/var/log/messages",
+        "/var/log/secure"
+    ],
+    "keywords": [
+        "failed",
+        "error", 
+        "warning",
+        "denied",
+        "rejected",
+        "invalid",
+        "timeout",
+        "crash",
+        "permission denied",
+        "authentication failure",
+        "segmentation fault"
+    ],
+    "output_file": "output/server.log",
+    "json_output": "web/data.json",
+    "refresh_interval": 5
+}

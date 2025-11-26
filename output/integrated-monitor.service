@@ -1,0 +1,29 @@
+# sudo nano /etc/systemd/system/integrated-monitor.service
+
+[Unit]
+Description=Integrated System Monitor and Backup (Boot Once)
+Documentation=https://github.com/yourrepo/log-monitor
+After=network.target multi-user.target
+Wants=network.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=no
+User=root
+Group=root
+WorkingDirectory=/home/firaz/SO_LATIHAN/log-monitor
+ExecStart=/usr/bin/python3 /home/firaz/SO_LATIHAN/log-monitor/integrated_daemona>
+
+# Timeout untuk eksekusi
+TimeoutStartSec=300
+
+# Logging
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=integrated-monitor
+
+# Security
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=multi-user.target

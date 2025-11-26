@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Monitor Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-left">
+                <h1>🖥️ System Monitor Dashboard</h1>
+                <p class="subtitle">Real-time system monitoring & update tracking</p>
+            </div>
+            <div class="header-right">
+                <div class="info-badge">
+                    <span class="label">Last Updated</span>
+                    <span id="lastCheck" class="value">Loading...</span>
+                </div>
+                <div class="info-badge">
+                    <span class="label">Uptime</span>
+                    <span id="uptime" class="value">-</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- System Info Bar -->
+        <div class="system-info-bar">
+            <div class="sys-info-item">
+                <span class="icon">💻</span>
+                <div>
+                    <div class="si-label">Hostname</div>
+                    <div id="hostname" class="si-value">-</div>
+                </div>
+            </div>
+            <div class="sys-info-item">
+                <span class="icon">🐧</span>
+                <div>
+                    <div class="si-label">Kernel</div>
+                    <div id="kernel" class="si-value">-</div>
+                </div>
+            </div>
+            <div class="sys-info-item">
+                <span class="icon">⚙️</span>
+                <div>
+                    <div class="si-label">Architecture</div>
+                    <div id="arch" class="si-value">-</div>
+                </div>
+            </div>
+            <div class="sys-info-item">
+                <span class="icon">🕒</span>
+                <div>
+                    <div class="si-label">Boot Time</div>
+                    <div id="bootTime" class="si-value">-</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Resource Cards -->
+        <div class="resource-grid">
+            <!-- CPU Card -->
+            <div class="card resource-card">
+                <div class="card-header">
+                    <h3>🔥 CPU Usage</h3>
+                    <span id="cpuValue" class="metric-value">0%</span>
+                </div>
+                <div class="progress-container">
+                    <div id="cpuBar" class="progress-bar cpu-bar"></div>
+                </div>
+                <div class="card-footer">
+                    <span class="footer-text">Current Load</span>
+                </div>
+            </div>
+
+            <!-- RAM Card -->
+            <div class="card resource-card">
+                <div class="card-header">
+                    <h3>💾 Memory</h3>
+                    <span id="ramValue" class="metric-value">0 GB</span>
+                </div>
+                <div class="progress-container">
+                    <div id="ramBar" class="progress-bar ram-bar"></div>
+                </div>
+                <div class="card-footer">
+                    <span id="ramFooter" class="footer-text">0 / 0 GB</span>
+                </div>
+            </div>
+
+            <!-- Disk Card -->
+            <div class="card resource-card">
+                <div class="card-header">
+                    <h3>💿 Disk Space</h3>
+                    <span id="diskValue" class="metric-value">0%</span>
+                </div>
+                <div class="progress-container">
+                    <div id="diskBar" class="progress-bar disk-bar"></div>
+                </div>
+                <div class="card-footer">
+                    <span id="diskFooter" class="footer-text">0 / 0 GB</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content Grid -->
+        <div class="main-grid">
+            <!-- Updates Section -->
+            <div class="card updates-card">
+                <div class="card-header">
+                    <h3>📦 System Updates</h3>
+                    <span id="updateBadge" class="badge badge-warning">0</span>
+                </div>
+                <div class="card-body">
+                    <div id="updateInfo" class="update-info">
+                        <p class="loading-text">Checking for updates...</p>
+                    </div>
+                    <div class="table-container">
+                        <table id="updateTable" class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Package</th>
+                                    <th>Current</th>
+                                    <th>Available</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td colspan="3" class="text-center">Loading...</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Backup Section -->
+            <div class="card backup-card">
+                <div class="card-header">
+                    <h3>💾 Backup Status</h3>
+                    <span id="backupBadge" class="badge badge-success">✓</span>
+                </div>
+                <div class="card-body">
+                    <div id="currentBackup" class="status-box">
+                        <div class="status-icon">📦</div>
+                        <div class="status-content">
+                            <div class="status-title">Checking backup status...</div>
+                            <div class="status-details">Please wait</div>
+                        </div>
+                    </div>
+
+                    <h4 class="section-title">Recent Backups</h4>
+                    <div class="list-container">
+                        <ul id="backupList" class="item-list">
+                            <li class="text-center">Loading...</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Update Logs Section -->
+        <div class="card logs-card">
+            <div class="card-header">
+                <h3>📋 Update Log Files</h3>
+                <span class="badge badge-info">Recent</span>
+            </div>
+            <div class="card-body">
+                <div class="logs-grid">
+                    <ul id="logsList" class="item-list">
+                        <li class="text-center">Loading log files...</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

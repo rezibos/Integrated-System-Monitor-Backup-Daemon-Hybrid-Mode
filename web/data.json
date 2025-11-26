@@ -1,0 +1,86 @@
+{
+  "last_check": "2025-11-26 20:25:00",
+  "boot_time": "2025-11-26 20:20:06",
+  "uptime": "0h 7m",
+  "system": {
+    "hostname": "reziboss",
+    "kernel": "6.17.9-arch1-1",
+    "arch": "x86_64"
+  },
+  "resources": {
+    "cpu": 0.3,
+    "ram": {
+      "percent": 5.9,
+      "used_gb": 0.91,
+      "total_gb": 15.43
+    },
+    "disk": {
+      "total": "233G",
+      "used": "52G",
+      "available": "169G",
+      "percent": "24"
+    }
+  },
+  "updates": {
+    "count": 2,
+    "list": [
+      {
+        "name": "libnghttp3",
+        "current": "1.12.0-1",
+        "new": "1.13.1-1"
+      },
+      {
+        "name": "libproxy",
+        "current": "0.5.11-1",
+        "new": "0.5.12-1"
+      }
+    ],
+    "distro": "Arch Linux",
+    "log_file": "updates_20251126_201959.log"
+  },
+  "backup": {
+    "current": {
+      "status": "success",
+      "filename": "backup_20251126_202006.zip",
+      "size": "1.1 MB",
+      "files": 23,
+      "timestamp": "20251126_202006"
+    },
+    "history": [
+      {
+        "name": "backup_20251126_202006.zip",
+        "size": "1.1 MB",
+        "date": "2025-11-26 20:20"
+      },
+      {
+        "name": "backup_20251126_201703.zip",
+        "size": "1.1 MB",
+        "date": "2025-11-26 20:17"
+      },
+      {
+        "name": "backup_20251126_200335.zip",
+        "size": "1.1 MB",
+        "date": "2025-11-26 20:03"
+      }
+    ]
+  },
+  "logs": {
+    "update_logs": [
+      {
+        "name": "updates_20251126_201959.log",
+        "size": "0.73 KB",
+        "date": "2025-11-26 20:20"
+      },
+      {
+        "name": "updates_20251126_201701.log",
+        "size": "0.73 KB",
+        "date": "2025-11-26 20:17"
+      },
+      {
+        "name": "updates_20251126_200328.log",
+        "size": "0.73 KB",
+        "date": "2025-11-26 20:03"
+      }
+    ]
+  }
+}
